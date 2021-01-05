@@ -84,9 +84,12 @@ CREATE TABLE transform.user_fact AS
 SELECT 
 	d.day_id,
 	h.user_id,
+	o.organization_id,
 	h.is_deleted
 FROM transform.day d
 JOIN transform.user_history h
 	ON h.from_date <= d.day_name
 	AND d.day_name < h.to_date
-ORDER BY 1,2;
+JOIN transform.organization o
+	ON h.organization_name = o.organization_name
+ORDER BY 1,2,3;
