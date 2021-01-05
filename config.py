@@ -1,14 +1,18 @@
 
-# test db should be different than prod db, I use the same for simplicity
 postgres = {
 	"dbname": 	"contentful",
 	"user": 	"nikolaos.kyrtsis", 
 	"password": ""	
 }
 
+rabbitmq = {
+	"host":				"localhost",
+	"queue":			"hello",
+	"busy_time":		"1",
+	"mini_batch_size":	"5"
+}
+
 input_data = {
-	"min_date":		"2020-12-05",
-	"max_date":		"2020-12-12",
 	"data_dir": 	"data/",
 	"orgs_file": 	"orgs_sample.json",
 	"events_file": 	"events_sample.json"
