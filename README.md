@@ -2,9 +2,10 @@
 
 ## Notes
 
+* `requirements.txt` contains the Python dependencies needed for this app to run
 * `config.py` is the config file of the app, it holds db credentials, so plz update them in order for the app to see the db
-  * I used a postgres instance with a `contentful` database (usualy a proper dev environment holds prod and test dbs, I used the same one for simplicity) 
-* data is usualy not part of a repo, I just included it in order to be ready for you to consume
+  * I used a postgres instance with a `contentful` database (usually a proper dev environment holds prod and test dbs, I used the same one for simplicity) 
+* data is usually not part of a repo, I just included it in order to be ready for you to consume
   * `data/` contains the 2 files from the gist provided to me
   * `test_data/` contains data for unit testing
 * run `python init.py` to create the load/test schema/tables and load the orgs data into the db
