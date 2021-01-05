@@ -30,7 +30,7 @@ class database:
 
 	def insert_data(self, table, columns, data):
 
-		sql = "INSERT INTO " + table +  "(" + ",".join(columns) + ") VALUES (" + ",".join(["%s"] * len(columns)) + ");";
+		sql = "INSERT INTO " + table +  "(" + ",".join(columns) + ") VALUES (" + ",".join(["%s"] * len(columns)) + ");"
 
 		try:
 			conn = psycopg2.connect(dbname=self.dbname, user=self.user, password=self.password)
